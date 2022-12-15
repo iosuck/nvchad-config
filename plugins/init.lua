@@ -11,6 +11,12 @@ return {
       require "custom.plugins.lspconfig"
     end,
   },
+  ["glepnir/lspsaga.nvim"] = {
+    branch = "main",
+    config = function()
+      require "plugins.custom.configs.lspsaga"
+    end,
+  },
     ["akinsho/toggleterm.nvim"] = {
     config = function()
       require "custom.plugins.toggleterm"

@@ -5,8 +5,12 @@ M.general = {
     [";"] = { ":", "command mode", opts = { nowait = true } },
     ["<CR>"] = { "<cmd> w <CR>", "save file" },
     ["<C-c>"] = { "<cmd> noh <CR>", "no highlight" },
+    ["<C-k>"] = { "<cmd>Lspsaga peek_definition<CR>", "lsp finder" },
+    ["ca"] = { "<cmd>Lspsaga code_action<CR>", "code action" },
+    ["gh"] = { "<cmd>Lspsaga lsp_finder<CR>", "no highlight" },
     ["<leader>ra"] = { 'y:%s/<c-r><c-w>//g<Left><Left>', "Replace Text" },
     ["<leader>r"] = { 'y:%s/<c-r><c-w>//gc<Left><Left><Left>', "Replace Text" },
+    ["ge"]= {"<cmd>Lspsaga diagnostic_jump_next<CR>","SAMPLE"},
   },
 }
 M.telescope = {
