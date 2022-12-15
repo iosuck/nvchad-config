@@ -109,4 +109,3 @@ custom_kind = {},
 -- like server_filetype_map = { metals = { "sbt", "scala" } }
 server_filetype_map = {},
 }
-saga.setup(options)

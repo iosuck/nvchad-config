@@ -14,7 +14,7 @@ return {
   ["glepnir/lspsaga.nvim"] = {
     branch = "main",
     config = function()
-      require "plugins.custom.configs.lspsaga"
+      require "custom.plugins.lspsaga"
     end,
   },
     ["akinsho/toggleterm.nvim"] = {
