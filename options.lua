@@ -1,11 +1,11 @@
 local opt = vim.opt
 local g = vim.g
+local vim = vim.api
 local config = require("core.utils").load_config()
-
 g.nvchad_theme = config.ui.theme
 g.toggle_theme_icon = "   "
 -- g.transparency = config.ui.transparency
-g.transparency = true 
+g.transparency = true
 g.theme_switcher_loaded = false
 
 opt.laststatus = 3 -- global statusline

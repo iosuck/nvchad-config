@@ -47,6 +47,7 @@ return {
   ["nvim-telescope/telescope.nvim"] = {
     override_options = {
       defaults = {
+        prompt_prefix = " ",
         preview = {
           filesize_hook = function(filepath, bufnr, opts)
             local max_bytes = 10000

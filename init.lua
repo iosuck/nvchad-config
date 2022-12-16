@@ -1,4 +1,7 @@
-local autocmd = vim.api.nvim_create_autocmd
+local autocmd = vim.cmd
+
+
+
 M.options = require "custom.options"
 
 -- Auto resize panes when resizing nvim window
@@ -6,3 +9,10 @@ M.options = require "custom.options"
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
+
+
+vim.cmd[[
+  augroup cursor_moved
+    autocmd hi linenr guifg=green
+  augroup end
+]]

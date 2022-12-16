@@ -4,6 +4,8 @@ local M = {}
 local themes = require "custom.overidden_themes"
 local highlights = require "custom.highlights"
 
+
+
 M.ui = {
   theme_toggle = { "onedark", "one_light" },
   theme = "pastelDark",
