@@ -17,40 +17,48 @@ return {
       require "custom.plugins.lspsaga"
     end,
   },
-    ["akinsho/toggleterm.nvim"] = {
+
+  ["akinsho/toggleterm.nvim"] = {
     config = function()
       require "custom.plugins.toggleterm"
     end,
   },
-
   -- overrde plugin configs
   ["nvim-treesitter/nvim-treesitter"] = {
     override_options = {
       highlight = {
         enable = true,
         additional_vim_regex_highlighting = true,
-     },
-       indent = {
-          enable = true,
-          disable = {"python","php"}
+      },
+      indent = {
+        enable = true,
+        disable = {"python","php"}
       },
     }
   },
+  ["L3MON4D3/LuaSnip"] = {
+    wants = "friendly-snippets",
+    after = "nvim-cmp",
+    config = function()
+      require "custom.plugins.luasnip"
+    end,
+  },
+
   ["nvim-telescope/telescope.nvim"] = {
     override_options = {
-    defaults = {
+      defaults = {
         preview = {
-            filesize_hook = function(filepath, bufnr, opts)
-                local max_bytes = 10000
-                local cmd = {"head", "-c", max_bytes, filepath}
-                require('telescope.previewers.utils').job_maker(cmd, bufnr, opts)
-            end
+          filesize_hook = function(filepath, bufnr, opts)
+            local max_bytes = 10000
+            local cmd = {"head", "-c", max_bytes, filepath}
+            require('telescope.previewers.utils').job_maker(cmd, bufnr, opts)
+          end
         },
-    },
-    pickers = {
-      find_files = {
-        previewer = false,
-        theme = "dropdown",
+      },
+      pickers = {
+        find_files = {
+          previewer = false,
+          theme = "dropdown",
         },
       },
     }
