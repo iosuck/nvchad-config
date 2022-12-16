@@ -20,7 +20,7 @@ local sources = {
   b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
 
   -- cpp
-  b.formatting.black.with { extra_args = { "--fast" } },
+  b.formatting.black.with { extra_args = { "--fast","--line-length","90" } },
   b.formatting.clang_format,
   b.formatting.rustfmt,
 }
