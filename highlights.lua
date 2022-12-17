@@ -1,12 +1,15 @@
 -- To find any highlight groups: "<cmd> Telescope highlights"
--- Each highlight group can take a table with variables fg, bg, bold, italic, etc
+-- Each highlight group can take a table with variables fg, bg, bold, bg, etc
 -- base30 variable names can also be used as colors
 
 local M = {}
 
 M.override = {
   CursorLine = {
-    bg = "black2",
+    bg = "#192129",
+  },
+  LineNr = {
+    fg = "#045c20",
   },
   Comment = {
     italic = true,
@@ -19,3 +22,4 @@ M.add = {
 }
 
 return M
+

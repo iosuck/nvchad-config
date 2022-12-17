@@ -11,8 +11,8 @@ M.options = require "custom.options"
 -- })
 
 
-vim.cmd[[
-  augroup cursor_moved
-    autocmd hi linenr guifg=green
-  augroup end
-]]
+-- vim.cmd[[
+--   augroup cursor_moved
+--     autocmd hi linenr guifg=green
+--   augroup end
+-- ]]

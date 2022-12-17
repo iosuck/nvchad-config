@@ -23,6 +23,7 @@ local sources = {
   b.formatting.black.with { extra_args = { "--fast","--line-length","90" } },
   b.formatting.clang_format,
   b.formatting.rustfmt,
+  b.diagnostics.flake8,
 }
 
 null_ls.setup {
